@@ -31,6 +31,7 @@ LITERACY_ARGUMENTS = {
 }
 
 TOPOLOGY_ARGUMENTS = [
+    "single_agent",
     "fully_connected",
     "independent",
     "centralized",

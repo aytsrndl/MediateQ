@@ -3,10 +3,14 @@ from src.topologies.independent import IndependentTopology
 from src.topologies.decentralized import DecentralizedTopology
 from src.topologies.centralized import CentralizedTopology
 from src.topologies.hybrid import HybridTopology
+from src.topologies.single_agent import SingleAgentTopology
 
 
 def create_topology(topology_name: str, agents):
     name = topology_name.strip().lower()
+
+    if name == "single_agent":
+        return SingleAgentTopology(agents)
 
     if name == "fully_connected":
         return FullyConnectedTopology(agents)
